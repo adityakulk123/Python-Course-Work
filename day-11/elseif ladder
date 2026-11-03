@@ -1,0 +1,44 @@
+#print('welcome to the weekend planner')
+#budget = int(input('enter the budget:'))
+
+#print ("you can go for ", end='')
+#if budget>10000 :
+ #   print('trip')
+#elif budget>5000:
+ #   print('shopping')
+#elif budget>2000:
+ #   print('dinner')
+#elif budget>1000:
+ #   print('movie')
+#elif budget>500:
+  #  print('snacks')
+#else:
+ #   print('panduko are puka')
+
+
+data ={
+    'praveen':{'status':'True','python':76,'mysql':80,'html':90},
+    'aditya':{'status':'True','python':90,'mysql':80,'html':70},
+    'sai':{'status':'True','python':50,'mysql':60,'html':70},
+    'kiran':{'status':'True','python':80,'mysql':90,'html':80},
+    'arun':{'status':'True','python':45,'mysql':50,'html':56},
+    'varshit':{'status':'False','python':None,'mysql':None,'html':None},
+}
+
+name = input('enter the name:')
+if name in data:
+    if data[name]['status']:
+        total = data[name]['python'] + data[name]['mysql'] + data f[name]['html'] 
+        avg = total/3
+        if avg >80:
+            print(f"{name} congrats your the first ")
+        elif avg>60:
+            print(f"{name}great work comback strong")
+        elif avg>40:
+            print(f"{name} you need to work hard")
+        elif avg>20:
+            print(f"{name} salu iga saduvu nedhi")
+    else:
+        print(f"{name} not found ")
+else:
+    print(f"{name} is absent")

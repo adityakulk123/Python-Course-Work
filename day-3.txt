@@ -1,0 +1,35 @@
+day 3 (data types and operators)
+
+data types 
+numerical data types
+int
+float
+complex
+
+sequential datatypes
+list
+tuple
+mapping datatypes
+set 
+dict
+boolean
+
+int     - 1,2,3,4.
+float   - 1.23,3.422,32.423.
+complex - 2j+1,3+4j.
+list    - [1,2,3,4]--> it is mutable, ordered, contains duplicates and enclosed between []  
+tuple   - (1,2.3,433) --> it is immutable , ordered, contains duplicates and enclosed between ()
+set     - {123,45324,54342,343,}-->it is mutable ,unordered, does not contain duplicates and enclosed between {}
+dict    - {1:"one",2:"two",3:"three"} it is mutable ,it is ordered and contain  in key value pair 
+bool    - status = true or flase statement
+none    - none type
+
+
+list  --> in the list we can change the data without allocating the different memory.
+tuple --> we cant change the data once allocated.
+set   --> we change the data but duplication is not allowed and the data is unordered.
+dict  -->it is mutable, contains as key value pair
+bool  -->none type
+
+
+

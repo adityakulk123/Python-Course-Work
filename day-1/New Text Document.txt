@@ -1,0 +1,22 @@
+****Feartues of the python*******
+
+1. Simple and Easy to Learn
+2. High-Level Programming Language
+3. Interpreted Language
+4. Dynamically Typed
+5. Object-Oriented Programming (OOP)
+6. Platform Independent
+7. Free and Open Source
+9. Automatic Memory Management
+10. Garbage Collection
+11. Extensive Standard Library
+12. Large Collection of Third-Party Libraries
+13. Extensible
+14. Supports Multiple Programming Paradigms
+15. Powerful Data Structures
+16. Extensive AI Libraries
+17. Machine Learning Support
+18. Deep Learning Support
+19. Data Processing and Analysis
+20. Natural Language Processing (NLP)
+21. Generative AI Support

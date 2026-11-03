@@ -1,0 +1,49 @@
+1.simple if 
+2.if -elsee
+3.elif ladder
+4.Nested if
+
+
+1. Simple IF – Smart Refrigerator Food Expiry Alert
+Imagine a smart refrigerator application that tracks food items. When an item is about to expire within the next two days, the application sends an alert.
+
+2. IF-ELSE – Smart Parking Slot Allocation
+
+Real-world scenario:
+
+Imagine a shopping mall has a smart parking management system.
+
+When a vehicle enters, the system checks whether parking slots are available.
+
+If slots are available, allow vehicle entry.
+Otherwise, display a parking-full message.
+
+
+3. IF-ELIF-ELSE – Cloud Server Auto-Scaling System
+
+Real-world scenario:
+
+Imagine you are developing a cloud monitoring application.
+
+Your application monitors CPU utilization on a server.
+
+Depending on CPU usage, it decides what action should be taken.
+
+CPU Usage	System Action
+0–40%	Normal operation
+41–65%	Monitor server
+66–85%	Increase server capacity
+Above 85%	Trigger emergency scaling
+
+4. Nested IF – Intelligent Insurance Claim Verification
+
+Real-world scenario:
+
+Imagine an insurance company develops an automated claim verification system.
+
+When a customer submits an insurance claim, the application performs multiple checks.
+
+First, check whether the customer has an active insurance policy.
+If active, check whether the incident is covered.
+If covered, check whether the submitted documents are verified.
+If everything is correct, approve the claim for further processing.
