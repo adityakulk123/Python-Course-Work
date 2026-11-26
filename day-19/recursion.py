@@ -84,7 +84,7 @@ def factorial(n):
 print(factorial(4))
 '''
 
-
+'''
 def sumoflst(n):
     if n==len(a):
         return 0
@@ -92,3 +92,14 @@ def sumoflst(n):
 
 a=[1,2,3,4,5,6,100]
 print(sumoflst(0))
+'''
+
+
+def display(n,w):
+    if n>len(s)-w:
+        return
+    print(s[n:n+w])
+    display(n+1,w)
+
+s='codegnan'
+display(0,3)

@@ -1,0 +1,673 @@
+# class: it is blueprint it contain attributies and methods
+# object: the object is an instance created for the class 
+1. Why are we switching from Procedural Programming to OOP?
+Procedural programming
+Procedural programming organizes a program around functions and step-by-step instructions.
+
+For example, imagine you are building an employee management system.
+employee1_name = "Aditya"employee1_salary = 25000employee2_name = "Rahul"employee2_salary = 30000def display_employee(name, salary):    print("Name:", name)    print("Salary:", salary)display_employee(employee1_name, employee1_salary)display_employee(employee2_name, employee2_salary)
+
+
+This works fine for two employees.
+
+But imagine your company has 1,000 employees.
+
+You have to manage:
+- Employee names
+- Salaries
+- Departments
+- Attendance
+- Leaves
+- Performance
+As your program grows, managing separate variables and functions becomes difficult.
+Problems with procedural programming in large applications
+- Data and functions are separated.
+- Code duplication increases.
+- Maintaining code becomes difficult.
+- Data can be modified from different places.
+- Reusability and organization become harder.
+How OOP solves this
+OOP organizes data and the functions that operate on that data together into classes and objects.
+
+Instead of separately managing each employee's data, we create a common blueprint.
+class Employee:    def __init__(self, name, salary):        self.name = name        self.salary = salary    def display(self):        print("Name:", self.name)        print("Salary:", self.salary)e1 = Employee("Aditya", 25000)e2 = Employee("Rahul", 30000)e1.display()e2.display()
+
+
+Now the code is organized, reusable, and easier to maintain.
+Procedural Programming	Object-Oriented Programming
+Focuses on functions	Focuses on objects
+Data and functions are separate	Data and methods are grouped
+Less convenient for large systems	Better suited for complex systems
+Reuse mainly through functions	Reuse through classes, inheritance, and composition
+Data protection is less structured	Encapsulation provides controlled access
+
+
+We don't switch to OOP because procedural programming is bad. We use OOP when an application becomes complex and needs better structure, reuse, maintainability, and data management.
+
+
+# Python OOP — Complete Beginner Explanation
+
+Let's understand **why we move from Procedural Programming to OOP**, and then learn the class, object, attributes, methods, and the four pillars using one real-world example.
+
+---
+
+# 1. Why are we switching from Procedural Programming to OOP?
+
+### Procedural programming
+
+Procedural programming organizes a program around **functions and step-by-step instructions**.
+
+For example, imagine you are building an employee management system.
+
+```python
+employee1_name = "Aditya"
+employee1_salary = 25000
+
+employee2_name = "Rahul"
+employee2_salary = 30000
+
+def display_employee(name, salary):
+    print("Name:", name)
+    print("Salary:", salary)
+
+display_employee(employee1_name, employee1_salary)
+display_employee(employee2_name, employee2_salary)
+```
+
+This works fine for two employees.
+
+But imagine your company has **1,000 employees**.
+
+You have to manage:
+- Employee names
+- Salaries
+- Departments
+- Attendance
+- Leaves
+- Performance
+
+As your program grows, managing separate variables and functions becomes difficult.
+
+### Problems with procedural programming in large applications
+
+- Data and functions are separated.
+- Code duplication increases.
+- Maintaining code becomes difficult.
+- Data can be modified from different places.
+- Reusability and organization become harder.
+
+### How OOP solves this
+
+OOP organizes data and the functions that operate on that data together into **classes and objects**.
+
+Instead of separately managing each employee's data, we create a common blueprint.
+
+```python
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def display(self):
+        print("Name:", self.name)
+        print("Salary:", self.salary)
+
+
+e1 = Employee("Aditya", 25000)
+e2 = Employee("Rahul", 30000)
+
+e1.display()
+e2.display()
+```
+
+Now the code is organized, reusable, and easier to maintain.
+
+| Procedural Programming | Object-Oriented Programming |
+|---|---|
+| Focuses on functions | Focuses on objects |
+| Data and functions are separate | Data and methods are grouped |
+| Less convenient for large systems | Better suited for complex systems |
+| Reuse mainly through functions | Reuse through classes, inheritance, and composition |
+| Data protection is less structured | Encapsulation provides controlled access |
+
+**We don't switch to OOP because procedural programming is bad. We use OOP when an application becomes complex and needs better structure, reuse, maintainability, and data management.**
+
+---
+
+# 2. What is a Class?
+
+A **class is a blueprint or template used to create objects.**
+
+Imagine a house blueprint. The blueprint describes how a house should be built, but it is not an actual house.
+
+Similarly, a class describes what an object will contain and what it can do.
+
+### Example
+
+```python
+class Employee:
+    name = "Aditya"
+    role = "Developer"
+```
+
+Here:
+- `Employee` is the class.
+- It defines information that an employee object can have.
+
+A class itself is not an individual employee.
+
+### Real-world examples of classes
+
+| Class | Objects |
+|---|---|
+| Car | BMW, Honda, Mahindra |
+| Student | Aditya, Rahul, Priya |
+| Employee | Employee 101, Employee 102 |
+| Mobile | Samsung S25, iPhone 17 |
+| BankAccount | Account 101, Account 102 |
+
+---
+
+# 3. What is an Object?
+
+An **object is an instance of a class**.
+
+If a class is a blueprint, an object is the actual thing created using that blueprint.
+
+```python
+class Employee:
+    name = "Aditya"
+
+e1 = Employee()
+e2 = Employee()
+
+print(e1.name)
+print(e2.name)
+```
+
+Here:
+
+- `Employee` → Class
+- `e1` → Object
+- `e2` → Object
+
+We can create many objects from one class.
+
+### Example from real life
+
+Suppose we have a `Car` class.
+
+```python
+class Car:
+    pass
+
+car1 = Car()
+car2 = Car()
+car3 = Car()
+```
+
+We created three different objects from one class.
+
+Each object can represent a different car.
+
+---
+
+# 4. What is an Attribute?
+
+An **attribute is a variable that stores information associated with a class or an object**.
+
+Attributes describe the characteristics or properties of an object.
+
+For example, an employee can have:
+
+- Name
+- Age
+- Salary
+- Department
+
+These are attributes.
+
+### Example
+
+```python
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+e1 = Employee("Aditya", 25000)
+
+print(e1.name)
+print(e1.salary)
+```
+
+Output:
+
+```text
+Aditya
+25000
+```
+
+In this example:
+
+- `name` → Attribute
+- `salary` → Attribute
+
+The values are stored inside the individual object.
+
+### Types of attributes
+
+**Instance attributes:** Belong to individual objects.
+
+```python
+self.name = name
+self.salary = salary
+```
+
+**Class attributes:** Shared by the class and commonly accessed by its instances.
+
+```python
+class Employee:
+    company = "ABC Technologies"
+```
+
+Here, `company` is a class attribute.
+
+---
+
+# 5. What is a Method?
+
+A **method is a function defined inside a class that describes the behavior of an object**.
+
+Attributes describe what an object has.
+
+Methods describe what an object can do.
+
+### Example
+
+```python
+class Employee:
+    def work(self):
+        print("Employee is working")
+
+    def attend_meeting(self):
+        print("Employee is attending a meeting")
+
+e1 = Employee()
+
+e1.work()
+e1.attend_meeting()
+```
+
+Output:
+
+```text
+Employee is working
+Employee is attending a meeting
+```
+
+Here:
+- `work()` → Method
+- `attend_meeting()` → Method
+
+### Attribute vs. Method
+
+| Attribute | Method |
+|---|---|
+| Stores information | Performs an action |
+| Name, salary, age | Work, display, calculate_salary |
+| Usually a variable | Usually a function defined inside a class |
+
+---
+
+# Understanding everything together
+
+Let's combine the concepts in one example.
+
+```python
+class Employee:
+
+    # Class attribute
+    company = "ABC Technologies"
+
+    # Constructor
+    def __init__(self, name, salary, department):
+        self.name = name
+        self.salary = salary
+        self.department = department
+
+    # Method
+    def display(self):
+        print("Name:", self.name)
+        print("Salary:", self.salary)
+        print("Department:", self.department)
+        print("Company:", self.company)
+
+
+# Creating objects
+e1 = Employee("Aditya", 25000, "IT")
+e2 = Employee("Rahul", 30000, "HR")
+
+e1.display()
+print("----------------")
+e2.display()
+```
+
+### Identify the components
+
+| Code | Concept |
+|---|---|
+| `Employee` | Class |
+| `e1`, `e2` | Objects |
+| `name`, `salary`, `department` | Instance attributes |
+| `company` | Class attribute |
+| `__init__()` | Constructor |
+| `display()` | Method |
+| `self` | Reference to the current object |
+
+---
+
+# 6. The Four Pillars of OOP
+
+The four pillars are the core principles that make OOP powerful.
+
+---
+
+## Pillar 1: Encapsulation
+
+### What is it?
+
+**Encapsulation means combining data and the methods that operate on that data within a class, while controlling how the data is accessed or modified.**
+
+### Real-world example: Bank account
+
+You should not be able to change your account balance to an arbitrary value.
+
+Instead, the bank allows you to deposit and withdraw money through controlled operations.
+
+```python
+class BankAccount:
+
+    def __init__(self, balance):
+        self.__balance = balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Invalid withdrawal")
+
+    def get_balance(self):
+        return self.__balance
+
+
+account = BankAccount(5000)
+
+account.deposit(2000)
+account.withdraw(1000)
+
+print(account.get_balance())
+```
+
+Output:
+
+```text
+6000
+```
+
+### What is happening?
+
+- `__balance` is intended to be hidden from normal direct access.
+- The user interacts with it through methods.
+- `deposit()` validates the amount.
+- `withdraw()` checks whether the withdrawal is valid.
+- `get_balance()` provides access to the balance.
+
+**Purpose:** Protect data and control how it is modified.
+
+---
+
+## Pillar 2: Inheritance
+
+### What is it?
+
+**Inheritance allows one class to acquire properties and methods from another class.**
+
+It helps with code reuse.
+
+### Real-world example
+
+A company has different types of employees.
+
+- Employee → Common properties
+- Developer → Employee + coding functionality
+- Manager → Employee + team management functionality
+
+Instead of rewriting common employee details, we inherit them.
+
+```python
+class Employee:
+
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print("Employee name:", self.name)
+
+
+class Developer(Employee):
+
+    def coding(self):
+        print(self.name, "is writing code")
+
+
+d1 = Developer("Aditya")
+
+d1.display()
+d1.coding()
+```
+
+Output:
+
+```text
+Employee name: Aditya
+Aditya is writing code
+```
+
+### What is happening?
+
+`Developer` inherits from `Employee`.
+
+Therefore, `Developer` can use:
+- `Employee`'s constructor
+- `display()` method
+
+It also has its own `coding()` method.
+
+**Purpose:** Reuse existing code and create relationships between classes.
+
+---
+
+## Pillar 3: Polymorphism
+
+### What is it?
+
+**Polymorphism means one interface or method name can represent different behaviors depending on the object.**
+
+The word means *many forms*.
+
+### Real-world example
+
+Different employees perform work differently.
+
+A developer writes code.
+
+A designer designs interfaces.
+
+A manager manages a team.
+
+All of them can have a `work()` method, but the behavior is different.
+
+```python
+class Developer:
+    def work(self):
+        print("Developer writes code")
+
+
+class Designer:
+    def work(self):
+        print("Designer creates UI designs")
+
+
+class Manager:
+    def work(self):
+        print("Manager manages the team")
+
+
+employees = [Developer(), Designer(), Manager()]
+
+for employee in employees:
+    employee.work()
+```
+
+Output:
+
+```text
+Developer writes code
+Designer creates UI designs
+Manager manages the team
+```
+
+Notice that we used the same method:
+
+```python
+employee.work()
+```
+
+But it produces different behavior depending on the object.
+
+**Purpose:** Make code flexible and extensible.
+
+---
+
+## Pillar 4: Abstraction
+
+### What is it?
+
+**Abstraction means hiding implementation details and exposing only the essential functionality.**
+
+You use something without needing to understand how everything inside it works.
+
+### Real-world example: ATM
+
+When you use an ATM:
+
+1. Insert your card.
+2. Enter your PIN.
+3. Choose withdrawal.
+4. Enter the amount.
+5. Receive cash.
+
+You don't need to understand:
+- Bank server communication
+- Database queries
+- Account validation implementation
+- Cash dispenser mechanics
+- Internal transaction processing
+
+The ATM exposes simple operations and hides the complex internal implementation.
+
+### Python example
+
+Python supports abstraction through abstract classes.
+
+```python
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self, amount):
+        pass
+
+
+class UPI(Payment):
+
+    def pay(self, amount):
+        print("Paid", amount, "using UPI")
+
+
+class Card(Payment):
+
+    def pay(self, amount):
+        print("Paid", amount, "using Card")
+
+
+payment = UPI()
+payment.pay(500)
+```
+
+Output:
+
+```text
+Paid 500 using UPI
+```
+
+The abstract `Payment` class defines **what payment classes must implement**, while the specific classes define **how payment happens**.
+
+**Purpose:** Reduce complexity and define a common interface.
+
+---
+
+# Quick comparison of the four pillars
+
+| Pillar | What it does | Real-world example |
+|---|---|---|
+| Encapsulation | Protects and controls data access | Bank balance |
+| Inheritance | Reuses existing class functionality | Developer inherits Employee |
+| Polymorphism | Same interface, different behaviors | Different employees' `work()` methods |
+| Abstraction | Hides implementation complexity | ATM/payment interface |
+
+---
+
+# Final revision — remember these six definitions
+
+| Concept | Simple definition |
+|---|---|
+| Class | Blueprint for creating objects |
+| Object | Instance of a class |
+| Attribute | Data or property associated with a class/object |
+| Method | Function defined inside a class |
+| Encapsulation | Bundling data and methods with controlled access |
+| Inheritance | Acquiring functionality from another class |
+| Polymorphism | Same interface, different behavior |
+| Abstraction | Hiding implementation details and exposing essential functionality |
+
+### The easiest way to remember OOP
+
+Think about an **Employee**:
+
+- **Class:** Employee blueprint
+- **Object:** Aditya, Rahul
+- **Attributes:** Name, salary, department
+- **Methods:** Work, attend meeting, calculate salary
+- **Encapsulation:** Control access to salary
+- **Inheritance:** Developer inherits from Employee
+- **Polymorphism:** Different employee types have different `work()` behaviors
+- **Abstraction:** Use a common interface without knowing internal implementation
+
+Once you understand this Employee example, you can understand how OOP is used in real applications such as banking systems, e-commerce websites, hospital systems, and enterprise software.
+
+Constructor in Python
+A constructor is a special method in a class that is automatically called when an object is created. It is used to initialize an object's attributes.
+
+In Python, the constructor is commonly written using __init__().
+1. Why do we need a constructor?
+Imagine you are creating a class for employees. Every employee has a different name, age, and salary.
+
+Without a constructor, you might have to assign values separately after creating each object.
+
